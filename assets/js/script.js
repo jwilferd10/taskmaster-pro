@@ -47,16 +47,19 @@ var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
+// user clicks on task text 
 $(".list-group").on("click", "p", function() {
-  var textInput = $("<textarea>")
- 
-  $(this).replaceWith(textInput)
+  // retrieve current text of p element
+  var text = $(this)
+    .text()
+    .trim();
 
-  textInput.trigger("focus")
+    // replace the p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
 
-  .addClass("form-control")
-
-  .val(text);
+    // auto focus on a new element
+    textInput.trigger("focus");
 });
 
 
@@ -148,6 +151,7 @@ $(".list-group").on("change", "input[type='text']", function() {
     auditTask($(taskSpan).closest(".list-group-item"));
 });
 
+// enable draggable/sortable feature on list-group elements
 $(".card .list-group").sortable({
   connectWith: $(".card .list-group"),
   scroll: false,
@@ -258,7 +262,7 @@ var auditTask = function(taskEl) {
   if(moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger");
   }
-  else if (Math.abs(moment().diff(time, "days")) <2) {
+  else if (Math.abs(moment().diff(time, "days")) <=2) {
     $(taskEl).addClass("list-group-item-warning");
   }
 };
@@ -281,7 +285,7 @@ $("#trash").droppable({
     $(".bottom-trash").removeClass("bottom-trash-active");
   }
 });
-
+           
 // remove all tasks
 $("#remove-tasks").on("click", function() {
   for (var key in tasks) {
