@@ -10,6 +10,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Staatliches", sans-serif;
 }
 
+.badge-primary {
+  font-size: 90%
+}
 .dropover {
   background-color: rgba(0,0,0,0.3);
 }
