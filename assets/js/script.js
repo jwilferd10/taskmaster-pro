@@ -111,7 +111,6 @@ $(".list-group").on("click", "span", function() {
   // enable jQuery ui datepicker
   dateInput.datepicker({
     minDate: 1,
-    readonly,
     onClose: function() {
       // when calender is closed, force a change event on the dateInput
       $(this).trigger("change");
