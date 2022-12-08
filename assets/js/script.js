@@ -102,8 +102,10 @@ $(".list-group").on("click", "span", function() {
   // get current text
   var date = $(this).text().trim();
 
+  // var inputClasses = ['form-control', ]
+
   // create new input element
-  var dateInput = $("<input>").attr("type", "text").addClass("form-control").val(date);
+  var dateInput = $("<input>").attr("type", "text", "readonly").addClass("form-control").val(date);
 
   // swap out elements
   $(this).replaceWith(dateInput);
@@ -111,7 +113,6 @@ $(".list-group").on("click", "span", function() {
   // enable jQuery ui datepicker
   dateInput.datepicker({
     minDate: 1,
-    readonly,
     onClose: function() {
       // when calender is closed, force a change event on the dateInput
       $(this).trigger("change");
