@@ -17,7 +17,7 @@
 
 ## :wave: Description: 
 <p> 
-Taskmaster Pro is a kanban board application that allows users to create tasks and systematically track the process from start to finish. To create a new task users must provide a description and due date, once the task is saved it'll create an HTML object that can be clicked and dragged between each stage of development. If users wish they can terminate ALL tasks by clicking the 'Delete All Tasks' button, to remove a single task the user can select and drag the task to where it says 'Drop Here To Remove'.
+Taskmaster Pro is a kanban board application that allows users to create tasks and systematically track the process from start to finish. To create a new task users must provide a description and due date, once the task is saved it'll create an HTML object that can be clicked and dragged between each stage of development. If users wish they can terminate ALL tasks by clicking the 'Delete All Tasks' button, to remove a single task the user can select and drag the task to where it says 'Drop Here To Remove'. Each task created is saved to localStorage.
 
 Taskmaster Pro was brought to life by the use of jQuery for it's quick and easy setup, Bootstrap for it's pre-established and responsive design, and Moment for setting up the task due-date and color coding each task based on due date. 
 
@@ -36,9 +36,9 @@ The base bootcamp project ended at commit 4e14bd4e5c3b758e0cecc1ca399aba6d81464c
 - WHEN I open the app
 	- THEN I am presented with sections labelled To Do, In Progress, In Review, and Done
 - WHEN I click Add Task
-  - THEN I am presented a modal to enter task description and due date
+	- THEN I am presented a modal to enter task description and due date
 - WHEN I have saved a task
-  - THEN a task object appears in the app
+	- THEN a task object appears in the app
 - WHEN my project progresses 
 	- THEN I can drag the task to the next section
 - WHEN the tasks due date is today
