@@ -28,12 +28,36 @@ The base bootcamp project ended at commit 4e14bd4e5c3b758e0cecc1ca399aba6d81464c
 </p>
   
 ## :book: User Story:
+**AS A team looking to streamline production**
+- I WANT an application to track my projects progress
+- SO THAT I can work in a more streamlined and organized environment
+
+**GIVEN I need a Kanban Board**
+- WHEN I open the app
+	- THEN I am presented with sections labelled To Do, In Progress, In Review, and Done
+- WHEN I click Add Task
+  - THEN I am presented a modal to enter task description and due date
+- WHEN I have saved a task
+  - THEN a task object appears in the app
+- WHEN my project progresses 
+	- THEN I can drag the task to the next section
+- WHEN the tasks due date is today
+	- THEN the task object is highlighted red
+- WHEN the task is due soon 
+	- THEN the task object is highlighted yellow
+- WHEN the task is no longer needed
+	- THEN I can delete the single task
+- WHEN the entire project is complete
+	- THEN I can delete all tasks.
 
 ## :floppy_disk: Resources Used:
 Main Resources:
 - HTML
 - CSS
+- Bootstrap 4
 - JavaScript
+- jQuery
+- Moment
 
 ## :minidisc: Installation and Usage:
 ### Install:
