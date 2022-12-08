@@ -1,8 +1,8 @@
 # 📅 Taskmaster Pro 📅
 
-:computer: **Live Deployment:** https://github.com/jwilferd10/taskmaster-pro
+:computer: **Live Deployment:** https://jwilferd10.github.io/taskmaster-pro/
 
-:computer: **Github Repository:** https://jwilferd10.github.io/taskmaster-pro/
+:computer: **Github Repository:** https://github.com/jwilferd10/taskmaster-pro
 
 ## :open_file_folder: Table of Contents:
   - [Preview](#camera-preview)
@@ -63,7 +63,14 @@ Main Resources:
 ### Install:
 - You can do this by clicking the *GREEN* button above and you can download it by ZIP or copy the SSH!
 ### Usage:
-
+- Click the 🟢 button labelled 'ADD TASK' it'll reveal a modal
+- Add a description to the task
+- Add a due date to the task
+- Save Task
+- Task Object should appear on TO DO list
+- Click/Tap the task object and drag it to desired section
+- To delete a singular task drag the specific task object to the 🔴 colored area labelled "DROP HERE TO REMOVE""
+- Click the 🔴 button labelled 'DELETE ALL TASKS' to delete all tasks
 
 ## :e-mail: Contact Information:
 - ### [jwilferd10](https://github.com/jwilferd10)
