@@ -111,7 +111,11 @@ $(".list-group").on("click", "span", function() {
 
   // enable jQuery ui datepicker
   dateInput.datepicker({
-    minDate: 1
+    minDate: 1,
+    onClose: function() {
+      // when calender is closed, force a change event on the dateInput
+      $(this).trigger("change");
+    }
   });
 
   // automatically focus on new element
@@ -241,11 +245,7 @@ $("#task-form-modal .btn-save").click(function() {
 });
 
 $("#modalDueDate").datepicker({
-  minDate: 1,
-  onClose: function() {
-    // when calender is closed, force a change event on the dateInput
-    $(this).trigger("change");
-  }
+  minDate: 1
 });
 
 var auditTask = function(taskEl) {
