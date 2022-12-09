@@ -169,12 +169,46 @@
           </button>
         </div>
         <div class="modal-body text-center">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga reprehenderit beatae repellendus, mollitia vero aspernatur ullam deserunt libero adipisci animi, quos maxime velit aperiam odio cupiditate odit commodi deleniti dolore?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sunt, praesentium totam consectetur nemo ad assumenda perspiciatis similique voluptatum veniam quod, tenetur debitis molestiae dolore, possimus minus aperiam porro quam?</p>
-          <ul class="directionsList">
-            <li class="pb-2">▶ 🔴 Words</li>
+          <p>Welcome to <span class="font-weight-bold">Taskmaster Pro!</span></p>
+          <p>This application is a Kanban Board, which are used to systematically track a tasks progress from start to finish.</p>
 
-            <li class="pb-2">▶ 🟡 Words</li>
+          <p>
+            <p><span class="font-weight-bold">To Add a Task:</span></p>
+            <button class="btn btn-add">
+              <span class="oi oi-plus mr-2"></span>Add Task
+            </button>        
+          </p>
+          
+          <p>
+            <p><span class="font-weight-bold">To Delete All Tasks:</span></p>
+
+            <button class="btn btn-delete">
+              <span class="oi oi-trash"></span>Delete All Tasks
+            </button>
+          </p>
+
+          <p class="font-weight-bold">
+            To Delete A Single Task:
+            <div>
+              <p>👆 Select task then drag to</p>
+
+              <button class="btn btn-delete">
+                <span class="oi oi-trash"></span>Drop Here to Remove
+              </button>
+            </div>
+          </p>
+
+          <p>
+            <p class="font-weight-bold"> To Move A Task:</p>
+            <p>Click/Tap and HOLD the Task and drag it over to desired section</p>
+          </p>
+          <p class="font-weight-bold">Each task is color coded based on certain parameters:</p>
+          <ul class="directionsList">
+            <li class="pb-2">▶ 🔴 Indicates due date is TODAY. (0 Days Until Due)</li>
+
+            <li class="pb-2">▶ 🟡 Indicates due date is near. (1-2 Days Until Due)</li>
+
+            <li class="pb-2">▶ ⚪ Indicates due date is not near. (3+ Days Until Due)</li>
           </ul>
         </div>
         <div class="modal-footer">
