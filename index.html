@@ -21,13 +21,18 @@
     <header class="col-12 col-lg-3 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3">
       <h1 class="text-center"><span class="oi oi-task d-inline d-lg-none"></span>Taskmaster Pro Edition</h1>
       
-      <button id="gitHubBtn" class="btn btn-outline-secondary pb-1"  target="_blank">
-        <a href="https://github.com/jwilferd10/taskmaster-pro">
-          <img id="gitHubImg" src="./assets/img/github.png" alt="GitHub Logo and Link">
-        </a>
-      </button>
+      <!-- Button Group -->
+      <div id="circularBtns" class="btn-toolbar" role="toolbar" aria-label="Github and Direction buttons">
+        <!-- Github Repository Button -->
+        <button id="gitHubBtn" class="btn btn-outline-secondary mr-2 pb-1"  target="_blank">
+          <a href="https://github.com/jwilferd10/taskmaster-pro">
+            <img id="gitHubImg" src="./assets/img/github.png" alt="GitHub Logo and Link">
+          </a>
+        </button>
 
-      <button class="btn-lg btnDirections btn btn-outline-info" data-toggle="modal" data-target="#directionsModal">ℹ</button>
+        <!-- Information Panel Button -->
+        <button class="btn-lg btnDirections btn btn-outline-info mr-2" data-toggle="modal" data-target="#directionsModal">ℹ</button>
+      </div>
 
       <!-- Save All Button -->
       <button id="create-task" class="btn btn-block btn-add" data-toggle="modal" data-target="#task-form-modal">
