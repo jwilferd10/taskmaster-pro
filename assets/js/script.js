@@ -8,6 +8,7 @@ var createTask = function(taskText, taskDate, taskList) {
     .text(taskDate);
   var taskP = $("<p>")
     .addClass("m-1")
+    .addClass("taskTextStyle")
     .text(taskText);
 
   // append span and p element to parent li
@@ -90,6 +91,7 @@ $(".list-group").on("blur", "textarea", function() {
   // recreate p element
   var taskP = $("<p>")
     .addClass("m-1")
+    .addClass("taskTextStyle")
 
     .text(text);
 
