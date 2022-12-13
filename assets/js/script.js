@@ -166,11 +166,13 @@ $(".card .list-group").sortable({
     // console.log("activate", this);
     $(this).addClass("dropover");
     $(".bottom-trash").addClass("bottom-trash-drag");
+    $(".mobileAddBtn").addClass("hideMobile");
   },
   deactivate: function(event) {
     // console.log("deactivate", this);
     $(this).removeClass("dropover");
     $(".bottom-trash").removeClass("bottom-trash-drag");
+    $(".mobileAddBtn").removeClass("hideMobile");
   },
   over: function(event) {
     // console.log("over", event.target);
