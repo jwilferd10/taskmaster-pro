@@ -159,7 +159,7 @@ $(".list-group").on("change", "input[type='text']", function() {
 // enable draggable/sortable feature on list-group elements
 $(".card .list-group").sortable({
   connectWith: $(".card .list-group"),
-  scroll: false,
+  scroll: true,
   tolerance: "pointer",
   helper: "clone",
   activate: function(event) {
