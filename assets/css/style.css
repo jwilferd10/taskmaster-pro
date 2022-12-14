@@ -1,3 +1,4 @@
+/* Disappears when task is actively being dragged */
 .hideMobile {
   visibility: hidden;
   opacity: 0;
@@ -133,7 +134,8 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 1px -50px;
 }
 
-@media (min-width: 767px) {
+/* Mobile button visibility */
+@media (min-width: 992px) {
   .mobileAddBtn {
     display: none; 
   }
