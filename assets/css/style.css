@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Staatliches", sans-serif;
 }
 
+/* circularBtns sets the Github and Info buttons in the center of it's box */
 #circularBtns {
   display:inline-block;
   margin-left: auto;
@@ -26,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
+/* Mobile btn style, stays fixed at bottom right of screen */
 .mobileAddBtn {
   border-radius: 60px;
   width: 55px;
@@ -36,11 +38,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 1px 4px black;
 }
 
+/* This is the + within the button */
 #mobileAddEmoji{
   margin-top: 4px;
   font-size: 25px;
 }
 
+/* Github btn style */
 #gitHubBtn {
   width: 50px;
   height: 50px;
@@ -48,42 +52,51 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1px;
 }
 
+/* Github img style (inside button) */
 #gitHubImg {
   margin-top: 3px;
 }
 
+/* Info/Direction styles  */
 .btnDirections {
   border-radius: 60px;
   width: 50px;
   height: 49px;
 }
 
+/* Style for the info/direction modal */
 .directionsList {
   list-style: none;
   text-align: justify;
 }
 
+/* badge-primary style, this targets due-dates */
 .badge-primary {
   font-size: 90%;
   box-shadow: 0px 1px 4px black;
 }
 
+/* task text, adds padding between due date and text itself */
 .taskTextStyle {
   padding-top: 2px;
 }
 
+/* Form control style, connected to adding task modal */
 .form-control {
   margin-top: 3%
 }
 
+/* Card Style */
 .listGroupStyle {
   box-shadow: 0px 6px 15px black;
 }
 
+/* Card Emoji Style */
 .cardEmoji {
   margin-right: 5px;
 }
 
+/* Dropover styles */
 .dropover {
   background-color: rgba(0,0,0,0.3);
 }
@@ -92,6 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0,0,0,0.9);
 }
 
+/* Delete Single Task style */
 .bottom-trash {
   opacity: 0;
   color: #f1f1f1;
@@ -102,15 +116,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(234,0,39,0.7);
 }
 
+/* Delete Single Task, animation */
 .bottom-trash-drag {
   transform: translate(0);
   opacity: 1;
 }
 
+/* Delete Single Task Hovered */
 .bottom-trash-active {
   background-color:rgba(234,0,39,1);
 }
 
+/* Save Btn Styles */
 .btn-add, .btn-save {
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
@@ -119,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 -10px;
 }
 
+/* Delete Btn Styles */
 .btn-close, .btn-delete {
   background-color: #EA0028;
   background-image: linear-gradient(180deg, #FF9A8B, #EA0028 100%);
@@ -127,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 -10px;
 }
 
+/* Btn hover effect */
 .btn-add:hover,
 .btn-save:hover,
 .btn-close:hover,
