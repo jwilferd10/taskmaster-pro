@@ -79,6 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 6px 15px black;
 }
 
+.cardEmoji {
+  margin-right: 5px;
+}
+
 .dropover {
   background-color: rgba(0,0,0,0.3);
 }
