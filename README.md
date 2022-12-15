@@ -29,7 +29,7 @@ Taskmaster Pro is a kanban board application that allows users to create tasks a
 
 Taskmaster Pro was brought to life by the use of jQuery for it's quick and easy setup, Bootstrap for it's pre-established and responsive design, and Moment for setting up the task due-date and color coding each task based on due date. 
 
-This application was the first time I used jQuery and was a part of my course at the UCLA Coding Bootcamp. However feeling the need to go further and proudly call this app my own, I'm currently trying to extend and improve upon this app by fixing bugs and adding features that weren't apart of the base project. 
+This application was the first time I used jQuery and was a part of my course at the UCLA Coding Bootcamp. However feeling the need to go further and proudly call this app my own, I have extended and improve upon this app by fixing bugs and adding features that weren't apart of the base project.
 
 The base bootcamp project ended at commit 4e14bd4e5c3b758e0cecc1ca399aba6d81464c3b. Anything after are ammendments that I personally made. Big thanks to the UCLA Coding Bootcamp, thank YOU for checking Taskmaster Pro out - I hope you enjoy it and happy coding! 
 
