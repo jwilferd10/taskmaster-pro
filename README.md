@@ -6,6 +6,7 @@
 
 ## :open_file_folder: Table of Contents:
   - [Preview](#camera-preview)
+  - [Demo](#movie_camera-demo)
   - [Description](#wave-description)
   - [User Story](#book-user-story)
   - [Resources Used](#floppy_disk-resources-used)
@@ -13,7 +14,14 @@
   - [Contact Information](#e-mail-contact-information)
 
 ## :camera: Preview:
+<p float="left">
+  <img src= "assets/img/taskmasterDesktop.jpg"  width="79%") />
+  <img src= "assets/img/TaskmasterMobile.png" width="20%") />
+</p>
 
+## :movie_camera: Demo:
+![image](assets/img/TaskmasterDesktop.gif)
+![image](assets/img/TaskmasterMobile.gif)
 
 ## :wave: Description: 
 <p> 
