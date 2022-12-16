@@ -11,6 +11,7 @@
   - [User Story](#book-user-story)
   - [Resources Used](#floppy_disk-resources-used)
   - [Installation](#minidisc-installation-and-usage)
+  - [Contributors](#paperclip-contributors)
   - [Contact Information](#e-mail-contact-information)
 
 ## :camera: Preview:
@@ -31,7 +32,7 @@ Taskmaster Pro was brought to life by the use of jQuery for it's quick and easy 
 
 This application was the first time I used jQuery and was a part of my course at the UCLA Coding Bootcamp. However feeling the need to go further and proudly call this app my own, I have extended and improve upon this app by fixing bugs and adding features that weren't apart of the base project.
 
-The base bootcamp project ended at commit 4e14bd4e5c3b758e0cecc1ca399aba6d81464c3b. Anything after are ammendments that I personally made. Big thanks to the UCLA Coding Bootcamp, thank YOU for checking Taskmaster Pro out - I hope you enjoy it and happy coding! 
+To further note, the base bootcamp project ended at commit 4e14bd4e5c3b758e0cecc1ca399aba6d81464c3b, anything after are ammendments that I personally made. Specifically my changes targetted the UI of the app, reliability on mobile devices, and finding and fixing bugs. Big thanks to the UCLA Coding Bootcamp for their direction, thank YOU for checking Taskmaster Pro out - I hope you enjoy it and happy coding! 
 
 </p>
   
@@ -74,11 +75,15 @@ Main Resources:
 - Click the 🟢 button labelled 'ADD TASK' it'll reveal a modal
 - Add a description to the task
 - Add a due date to the task
-- Save Task
+- Save task by clicking off each text area
 - Task Object should appear on TO DO list
 - Click/Tap the task object and drag it to desired section
 - To delete a singular task drag the specific task object to the 🔴 colored area labelled "DROP HERE TO REMOVE""
 - Click the 🔴 button labelled 'DELETE ALL TASKS' to delete all tasks
+
+## :paperclip: Contributors
+- UCLA Coding Bootcamp (Setup of main project)
+- jwilferd10 (Design additions, mobile-setup, bug fixing) 
 
 ## :e-mail: Contact Information:
 - ### [jwilferd10](https://github.com/jwilferd10)
