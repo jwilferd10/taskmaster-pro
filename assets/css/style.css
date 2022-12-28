@@ -97,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(2px 3px 1px #000000);
 }
 
+.headerShadow {
+  text-shadow: 2px 2px #000000;
+}
 /* Dropover styles */
 .dropover {
   background-color: rgba(0,0,0,0.3);
