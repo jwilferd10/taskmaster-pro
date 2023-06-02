@@ -33,6 +33,7 @@ var loadTasks = function() {
       done: []
     };
   } else {
+    // assign parsed 'storedTasks' to tasks
     tasks = storedTasks;
   }
 
