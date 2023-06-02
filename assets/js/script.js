@@ -22,16 +22,18 @@ var createTask = function(taskText, taskDate, taskList) {
 };
 
 var loadTasks = function() {
-  tasks = JSON.parse(localStorage.getItem("tasks"));
+  let storedTasks = JSON.parse(localStorage.getItem("tasks"));
 
   // if nothing in localStorage, create a new object to track all task status arrays
-  if (!tasks) {
+  if (!storedTasks) {
     tasks = {
       toDo: [],
       inProgress: [],
       inReview: [],
       done: []
     };
+  } else {
+    tasks = storedTasks;
   }
 
   // loop over object properties
