@@ -239,6 +239,16 @@ $("#task-form-modal .btn-save").click(function() {
     // close modal
     $("#task-form-modal").modal("hide");
 
+    // initialize tasks if undefined
+    if (!tasks) {
+      tasks = {
+        toDo: [],
+        inProgress: [],
+        inReview: [],
+        done: []
+      };
+    }
+
     // save in tasks array
     tasks.toDo.push({
       text: taskText,
