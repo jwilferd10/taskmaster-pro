@@ -36,10 +36,13 @@ var loadTasks = function() {
 
   // loop over object properties
   $.each(tasks, function(list, arr) {
-    // then loop over sub-array
-    arr.forEach(function(task) {
-      createTask(task.text, task.date, list);
-    });
+    // check if arr is an array
+    if (Array.isArray(arr)) {
+      // then loop over sub-array
+      arr.forEach(function(task) {
+        createTask(task.text, task.date, list);
+      });
+    }
   });
 };
 
