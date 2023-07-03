@@ -1,243 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Taskmaster Pro: Empower Your Team with Effective Task Management</title>
+  </head>
+  <body>
+    <div class="row min-vh-100 no-gutters">
+      <!-- Project Title & Header -->
+      <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
+        <h1 class="text-center"><span class="oi oi-task d-inline d-lg-none"></span>Taskmaster Pro Edition</h1>
+        
+        <!-- Button Group -->
+        <nav id="circularBtns" class="btn-toolbar" role="toolbar" aria-label="Github and Direction buttons">
+          <!-- Github Repository Button -->
+          <button id="gitHubBtn" class="btn btn-outline-secondary mr-2 pb-1" >
+            <a href="https://github.com/jwilferd10/taskmaster-pro" target="_blank" rel="noopener noreferrer">
+              <img id="gitHubImg" src="./assets/img/github.png" alt="GitHub Logo and Link">
+            </a>
+          </button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Taskmaster Pro: Empower Your Team with Effective Task Management</title>
-</head>
+          <!-- Information Panel Button -->
+          <button class="btn-lg btnDirections btn btn-outline-info mr-2" data-toggle="modal" data-target="#directionsModal">ℹ</button>
+        </nav>
 
-<body>
-
-  <main class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
-      <h1 class="text-center"><span class="oi oi-task d-inline d-lg-none"></span>Taskmaster Pro Edition</h1>
-      
-      <!-- Button Group -->
-      <nav id="circularBtns" class="btn-toolbar" role="toolbar" aria-label="Github and Direction buttons">
-        <!-- Github Repository Button -->
-        <button id="gitHubBtn" class="btn btn-outline-secondary mr-2 pb-1" >
-          <a href="https://github.com/jwilferd10/taskmaster-pro" target="_blank" rel="noopener noreferrer">
-            <img id="gitHubImg" src="./assets/img/github.png" alt="GitHub Logo and Link">
-          </a>
+        <!-- Save All Button -->
+        <button id="create-task" class="btn btn-block btn-add" data-toggle="modal" data-target="#task-form-modal">
+          <span class="oi oi-plus mr-2"></span>Add Task
         </button>
 
-        <!-- Information Panel Button -->
-        <button class="btn-lg btnDirections btn btn-outline-info mr-2" data-toggle="modal" data-target="#directionsModal">ℹ</button>
-      </nav>
+        <!-- Delete All Button -->
+        <button class="btn btn-block btn-delete" data-toggle="modal" data-target="#deleteAllModal">
+          <span class="oi oi-trash"></span>Delete All Tasks
+        </button>
+        
+        <span class="oi oi-task display-1 text-center mb-2 d-none d-lg-block mt-auto"></span>
+        <p class="d-none d-lg-block">
+          The benefits of a Kanban Board is truly astounding, with proper use you'll be able to increase your flexibility, productivity, and efficiency. 
+          It's use is universal from studying to engineering and thus a worthy investment to make. It's a tried and true system.
+        </p>
+      </header>
 
-      <!-- Save All Button -->
-      <button id="create-task" class="btn btn-block btn-add" data-toggle="modal" data-target="#task-form-modal">
-        <span class="oi oi-plus mr-2"></span>Add Task
-      </button>
-
-      <!-- Delete All Button -->
-      <button class="btn btn-block btn-delete" data-toggle="modal" data-target="#deleteAllModal">
-        <span class="oi oi-trash"></span>Delete All Tasks
-      </button>
-      
-      <span class="oi oi-task display-1 text-center mb-2 d-none d-lg-block mt-auto"></span>
-      <p class="d-none d-lg-block">
-        The benefits of a Kanban Board is truly astounding, with proper use you'll be able to increase your flexibility, productivity, and efficiency. 
-        It's use is universal from studying to engineering and thus a worthy investment to make. It's a tried and true system.
-      </p>
-    </header>
-
-    <!-- Main Content -->
-    <main class="col-12 col-lg-9 d-flex flex-column overflow-hidden">
-      <div class="m-5 row justify-content-around">
-        <!-- To Do  -->
-        <section class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-info text-light"><span class="cardEmoji">📩</span> <span class="headerShadow">To Do</span></h2>
-            <ul id="list-toDo" class="list-group listGroupStyle">
-              <!-- list items go here -->
-             </ul>
-          </div>
-        </section>
-
-        <!--  In Progress -->
-        <section class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-primary text-light"><span class="cardEmoji">🔧</span> <span class="headerShadow">In Progress</span></h2>
-            <ul id="list-inProgress" class="list-group listGroupStyle">
-              <!-- list items go here -->
-            </ul>
-          </div>
-        </section>
-
-        <!-- In Review start -->
-        <section class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-warning text-light"><span class="cardEmoji">📍</span> <span class="headerShadow">In Review</span></h2>
-            <ul id="list-inReview" class="list-group listGroupStyle">
-              <!-- list items go here -->
-            </ul>
-          </div>
-        </section>
-
-        <!-- Completed Task Start -->
-        <section class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-success text-light"><span class="cardEmoji">✔️</span> <span class="headerShadow">Done</span></h2>
-            <ul id="list-done" class="list-group listGroupStyle">
-              <!-- list items go here -->
-            </ul>
-          </div>
-        </section>
-
-        <!-- End of Task Div's -->
-      </div>
-
-      <!-- Mobile Add Task Button -->
-      <button type="button" id="create-task" class="btn btn-add mobileAddBtn" data-toggle="modal" data-target="#task-form-modal">
-        <span id="mobileAddEmoji"class="oi oi-plus"></span>
-      </button>
-
-      <!-- Remove Task Start -->
-      <footer class="mt-auto" id="trash">
-        <div class="w-100 p-3 text-center bottom-trash box-shadow: 0px 6px 15px black;">
-          <span class="oi oi-trash"></span>Drop Here to Remove
-        </div>
-      </footer>
-
-    </main>
-  </main>
-
-  <!-- Modals -->
-  
-  <!-- Add Task Modal -->
-  <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="task-form-modal">Add New Task</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="modalTaskDescription">Task description</label>
-              <textarea id="modalTaskDescription" rows="3" class="form-control"></textarea>
+      <!-- Main Content -->
+      <main class="col-12 col-lg-9 d-flex flex-column overflow-hidden">
+        <div class="m-5 row justify-content-around">
+          <!-- To Do  -->
+          <section class="col-12 col-md-6 col-xl-3 mb-3">
+            <div class="card">
+              <h4 class="card-header bg-info text-light"><span class="cardEmoji">📩</span> <span class="headerShadow">To Do</span></h2>
+              <ul id="list-toDo" class="list-group listGroupStyle">
+                <!-- list items go here -->
+              </ul>
             </div>
-            <div class="form-group">
-              <label for="modalDueDate">Due date</label>
-              <input type="text" class="form-control" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+          </section>
+
+          <!--  In Progress -->
+          <section class="col-12 col-md-6 col-xl-3 mb-3">
+            <div class="card">
+              <h4 class="card-header bg-primary text-light"><span class="cardEmoji">🔧</span> <span class="headerShadow">In Progress</span></h2>
+              <ul id="list-inProgress" class="list-group listGroupStyle">
+                <!-- list items go here -->
+              </ul>
             </div>
-          </form>
+          </section>
+
+          <!-- In Review start -->
+          <section class="col-12 col-md-6 col-xl-3 mb-3">
+            <div class="card">
+              <h4 class="card-header bg-warning text-light"><span class="cardEmoji">📍</span> <span class="headerShadow">In Review</span></h2>
+              <ul id="list-inReview" class="list-group listGroupStyle">
+                <!-- list items go here -->
+              </ul>
+            </div>
+          </section>
+
+          <!-- Completed Task Start -->
+          <section class="col-12 col-md-6 col-xl-3 mb-3">
+            <div class="card">
+              <h4 class="card-header bg-success text-light"><span class="cardEmoji">✔️</span> <span class="headerShadow">Done</span></h2>
+              <ul id="list-done" class="list-group listGroupStyle">
+                <!-- list items go here -->
+              </ul>
+            </div>
+          </section>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-save">Save Task</button>
+
+        <!-- Mobile Add Task Button -->
+        <button type="button" id="create-task" class="btn btn-add mobileAddBtn" data-toggle="modal" data-target="#task-form-modal">
+          <span id="mobileAddEmoji"class="oi oi-plus"></span>
+        </button>
+
+        <!-- Remove Task Start -->
+        <footer class="mt-auto" id="trash">
+          <div class="w-100 p-3 text-center bottom-trash box-shadow: 0px 6px 15px black;">
+            <span class="oi oi-trash"></span>Drop Here to Remove
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Modals -->
+    
+    <!-- Add Task Modal -->
+    <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="task-form-modal">Add New Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="modalTaskDescription">Task description</label>
+                <textarea id="modalTaskDescription" rows="3" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="modalDueDate">Due date</label>
+                <input type="text" class="form-control" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-save">Save Task</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Delete All Tasks -->
-  <div class="modal fade" id="deleteAllModal" tabindex="-1" role="dialog" aria-labelledby="deleteAllModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteAllHeader">❗ Delete All Tasks?</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          You're about to delete ALL tasks. Click 'Delete All Tasks' again to confirm the action.
-        </div>
-        <div class="modal-footer">
-          <!-- Close Modal -->
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <!-- Delete All Confirm -->
-          <button id="remove-tasks" class="btn btn-delete" data-dismiss="modal">
-            <span class="oi oi-trash"></span>Delete All Tasks
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Directions Modal -->
-  <div class="modal fade" id="directionsModal" tabindex="-1" role="dialog" aria-labelledby="directionsModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content modal-content-info">
-        <div class="modal-header">
-          <h5 class="modal-title" id="directionModalLabel">ℹ Instructions</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-center">
-          <p>Welcome to <span class="font-weight-bold">Taskmaster Pro!</span></p>
-          <p>This application is a Kanban Board, which are used to systematically track a tasks progress from start to finish.</p>
-
-          <p>
-            <p><span class="font-weight-bold">To Add a Task:</span></p>
-            <button class="btn btn-add">
-              <span class="oi oi-plus mr-2"></span>Add Task
-            </button>        
-          </p>
-          
-          <p>
-            <p><span class="font-weight-bold">To Delete All Tasks:</span></p>
-
-            <button class="btn btn-delete">
+    <!-- Delete All Tasks -->
+    <div class="modal fade" id="deleteAllModal" tabindex="-1" role="dialog" aria-labelledby="deleteAllModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteAllHeader">❗ Delete All Tasks?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            You're about to delete ALL tasks. Click 'Delete All Tasks' again to confirm the action.
+          </div>
+          <div class="modal-footer">
+            <!-- Close Modal -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!-- Delete All Confirm -->
+            <button id="remove-tasks" class="btn btn-delete" data-dismiss="modal">
               <span class="oi oi-trash"></span>Delete All Tasks
             </button>
-          </p>
-
-          <p class="font-weight-bold">
-            To Delete A Single Task:
-            <div>
-              <p>👆 Select task then drag to</p>
-
-              <button class="btn btn-delete">
-                <span class="oi oi-trash"></span>Drop Here to Remove
-              </button>
-            </div>
-          </p>
-
-          <p>
-            <p class="font-weight-bold"> To Move A Task:</p>
-            <p>Click/Tap and HOLD the Task and drag it over to desired section</p>
-          </p>
-          <p class="font-weight-bold">Each task is color coded based on certain parameters:</p>
-          <ul class="directionsList">
-            <li class="pb-2">▶ 🔴 Indicates due date is TODAY. (0 Days Until Due)</li>
-
-            <li class="pb-2">▶ 🟡 Indicates due date is near. (1-2 Days Until Due)</li>
-
-            <li class="pb-2">▶ ⚪ Indicates due date is not near. (3+ Days Until Due)</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>  
 
-<!-- Script Sources -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
+    <!-- Directions Modal -->
+    <div class="modal fade" id="directionsModal" tabindex="-1" role="dialog" aria-labelledby="directionsModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content-info">
+          <div class="modal-header">
+            <h5 class="modal-title" id="directionModalLabel">ℹ Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <p>Welcome to <span class="font-weight-bold">Taskmaster Pro!</span></p>
+            <p>This application is a Kanban Board, which are used to systematically track a tasks progress from start to finish.</p>
 
+            <p>
+              <p><span class="font-weight-bold">To Add a Task:</span></p>
+              <button class="btn btn-add">
+                <span class="oi oi-plus mr-2"></span>Add Task
+              </button>        
+            </p>
+            
+            <p>
+              <p><span class="font-weight-bold">To Delete All Tasks:</span></p>
+
+              <button class="btn btn-delete">
+                <span class="oi oi-trash"></span>Delete All Tasks
+              </button>
+            </p>
+
+            <p class="font-weight-bold">
+              To Delete A Single Task:
+              <div>
+                <p>👆 Select task then drag to</p>
+
+                <button class="btn btn-delete">
+                  <span class="oi oi-trash"></span>Drop Here to Remove
+                </button>
+              </div>
+            </p>
+
+            <p>
+              <p class="font-weight-bold"> To Move A Task:</p>
+              <p>Click/Tap and HOLD the Task and drag it over to desired section</p>
+            </p>
+            <p class="font-weight-bold">Each task is color coded based on certain parameters:</p>
+            <ul class="directionsList">
+              <li class="pb-2">▶ 🔴 Indicates due date is TODAY. (0 Days Until Due)</li>
+
+              <li class="pb-2">▶ 🟡 Indicates due date is near. (1-2 Days Until Due)</li>
+
+              <li class="pb-2">▶ ⚪ Indicates due date is not near. (3+ Days Until Due)</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Script Sources -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
