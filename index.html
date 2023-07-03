@@ -17,12 +17,12 @@
 
 <body>
 
-  <div class="row min-vh-100 no-gutters">
+  <main class="row min-vh-100 no-gutters">
     <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
       <h1 class="text-center"><span class="oi oi-task d-inline d-lg-none"></span>Taskmaster Pro Edition</h1>
       
       <!-- Button Group -->
-      <div id="circularBtns" class="btn-toolbar" role="toolbar" aria-label="Github and Direction buttons">
+      <nav id="circularBtns" class="btn-toolbar" role="toolbar" aria-label="Github and Direction buttons">
         <!-- Github Repository Button -->
         <button id="gitHubBtn" class="btn btn-outline-secondary mr-2 pb-1" >
           <a href="https://github.com/jwilferd10/taskmaster-pro" target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@
 
         <!-- Information Panel Button -->
         <button class="btn-lg btnDirections btn btn-outline-info mr-2" data-toggle="modal" data-target="#directionsModal">ℹ</button>
-      </div>
+      </nav>
 
       <!-- Save All Button -->
       <button id="create-task" class="btn btn-block btn-add" data-toggle="modal" data-target="#task-form-modal">
@@ -55,41 +55,45 @@
     <main class="col-12 col-lg-9 d-flex flex-column overflow-hidden">
       <div class="m-5 row justify-content-around">
         <!-- To Do  -->
-        <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <section class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
             <h4 class="card-header bg-info text-light"><span class="cardEmoji">📩</span> <span class="headerShadow">To Do</span></h2>
             <ul id="list-toDo" class="list-group listGroupStyle">
               <!-- list items go here -->
              </ul>
           </div>
-        </div>
+        </section>
+
         <!--  In Progress -->
-        <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <section class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
             <h4 class="card-header bg-primary text-light"><span class="cardEmoji">🔧</span> <span class="headerShadow">In Progress</span></h2>
             <ul id="list-inProgress" class="list-group listGroupStyle">
               <!-- list items go here -->
             </ul>
           </div>
-        </div>
+        </section>
+
         <!-- In Review start -->
-        <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <section class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
             <h4 class="card-header bg-warning text-light"><span class="cardEmoji">📍</span> <span class="headerShadow">In Review</span></h2>
             <ul id="list-inReview" class="list-group listGroupStyle">
               <!-- list items go here -->
             </ul>
           </div>
-        </div>
+        </section>
+
         <!-- Completed Task Start -->
-        <div class="col-12 col-md-6 col-xl-3 mb-3">
+        <section class="col-12 col-md-6 col-xl-3 mb-3">
           <div class="card">
             <h4 class="card-header bg-success text-light"><span class="cardEmoji">✔️</span> <span class="headerShadow">Done</span></h2>
             <ul id="list-done" class="list-group listGroupStyle">
               <!-- list items go here -->
             </ul>
           </div>
-        </div>
+        </section>
+
         <!-- End of Task Div's -->
       </div>
 
@@ -99,14 +103,14 @@
       </button>
 
       <!-- Remove Task Start -->
-      <div class="mt-auto" id="trash">
+      <footer class="mt-auto" id="trash">
         <div class="w-100 p-3 text-center bottom-trash box-shadow: 0px 6px 15px black;">
           <span class="oi oi-trash"></span>Drop Here to Remove
         </div>
-      </div>
+      </footer>
 
     </main>
-  </div>
+  </main>
 
   <!-- Modals -->
   
@@ -226,7 +230,7 @@
     </div>
   </div>  
 
-
+<!-- Script Sources -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
