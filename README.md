@@ -1,6 +1,6 @@
 # 📅 Taskmaster Pro 📅
 
-### Need to track a projects progress? A Kanban Board can help you do that! <br>
+### Empower Your Team with Effective Task Management <br>
 
 :computer: **Live Deployment:** https://jwilferd10.github.io/taskmaster-pro/
 
